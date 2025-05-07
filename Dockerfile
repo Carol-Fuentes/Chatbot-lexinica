@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5005
 
 # Comando para arrancar el servidor Rasa
-CMD ["run", "--enable-api", "--cors", "*", "--debug"]
+CMD ["rasa", "run", "--enable-api", "--cors", "*", "--debug"]
