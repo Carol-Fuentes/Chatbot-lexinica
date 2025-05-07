@@ -1,17 +1,15 @@
-# Imagen base oficial de Rasa
 FROM rasa/rasa:3.6.10
 
-# Copia todos los archivos del proyecto
+# Copia tu proyecto al contenedor
 COPY . /app
 
-# Establece el directorio de trabajo
 WORKDIR /app
 
-# Instala las dependencias si existe requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Instala dependencias adicionales si es necesario
+RUN pip install -r requirements.txt || true
 
-# Expone el puerto usado por el webhook REST de Rasa
+# Puerto usado por el webhook REST
 EXPOSE 5005
 
-# Comando para arrancar el servidor Rasa
+# Comando para iniciar el bot Rasa con API REST
 CMD ["run", "--enable-api", "--cors", "*", "--debug"]
