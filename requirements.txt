@@ -1,2 +1,2 @@
-rasa==3.6.10
+rasa==3.6.0
 requests
