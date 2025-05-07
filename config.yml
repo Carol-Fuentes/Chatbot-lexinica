@@ -1,0 +1,15 @@
+version: "3.0"
+language: "en"
+pipeline:
+- name: "SpacyNLP"
+  model: "en_core_web_md"
+- name: "SpacyTokenizer"
+- name: "RegexEntityExtractor"
+- name: "CRFEntityExtractor"
+- name: "EntitySynonymMapper"
+- name: "SklearnIntentClassifier"
+policies:
+- name: "MemoizationPolicy"
+- name: "TEDPolicy"
+- name: "RulePolicy"
+assistant_id: 20250506-065116-daring-world

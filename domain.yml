@@ -1,0 +1,24 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+
+entities:
+  # Puedes agregar tus entidades aquí si las tienes
+  # - entity_name
+
+responses:
+  utter_greet:
+    - text: "¡Hola! ¿Cómo puedo ayudarte?"
+  utter_goodbye:
+    - text: "¡Adiós! Que tengas un buen día."
+
+actions:
+  # Aquí puedes agregar tus acciones personalizadas si tienes alguna
+  # - action_custom
+
+# Aquí puedes agregar las configuraciones para slots si las estás utilizando
+slots:
+  # slot_name:
+  #   type: unfeasible

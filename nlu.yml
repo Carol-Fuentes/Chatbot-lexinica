@@ -1,0 +1,12 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - Hola
+    - Buen día
+    - ¿Qué tal?
+- intent: goodbye
+  examples: |
+    - Adiós
+    - Hasta luego
+    - Nos vemos
